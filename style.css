@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+.header{
+    padding: 60px 7% 0;
+    text-align: center;
+    font-size: 12px;
+    color: hsl(234, 12%, 34%);
+}
+
+.header .lighter{
+    font-weight: 200;
+}
+
+.header .bold{
+    font-weight: 600;
+}
+
+.header p{
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: hsl(229, 6%, 66%);
+}
+
+.main_grid{
+    margin-top: 30px;
+    padding: 30px 7% 0;
+    color: hsl(234, 12%, 34%);
+}
+
+.card {
+    padding: 25px;
+    margin-bottom: 15px;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -3px 3px 14px rgba(0, 0, 0, 0.15);
+    border-top: 5px solid gray;
+
+}
+
+.card p{
+    padding-top: 5px;
+    padding-bottom: 40px;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+   
+
+}
+
+.card img{
+    align-self: flex-end;
+    width: 60px;
+}
+
+.card:nth-of-type(1){
+    border-color: hsl(180, 62%, 55%);
+}
+
+.card:nth-of-type(2){
+    border-color: hsl(0, 78%, 62%);
+}
+
+.card:nth-of-type(3){
+    border-color: hsl(34, 97%, 64%);
+}
+
+.card:nth-of-type(4){
+    border-color: hsl(212, 86%, 64%);
+}
+
+@media(min-width: 1440px){
+    .header{
+        font-size: 15px;
+    }
+
+    .main_grid{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: 1fr 1fr;
+        gap: 30px
+    }
+
+    .card{
+        margin: 0;
+        width:400px;
+        height: 260px;
+        padding-bottom: 0;
+    } 
+    /* .card:first-child,
+    .card:last-child{
+        height: 50%;
+    } */
+    .card:nth-of-type(1){
+        grid-row: span 2;
+        justify-self: end;
+        align-self: center;
+    }
+    .card:nth-of-type(2){
+        grid-row: 1;
+        grid-column: 2;
+        justify-self: center;
+        align-self: center;
+    }
+    .card:nth-of-type(3){
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .card:nth-of-type(4){
+        grid-row: span 2;
+        grid-column: 3;
+        justify-self: start;
+        align-self: center;
+    }
+}
+
